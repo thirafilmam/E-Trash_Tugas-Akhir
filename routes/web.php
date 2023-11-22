@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('/tes', function () {
     return view('index');
 });
+Route::get('/harga', function () {
+    return view('layanan-harga-sampah');
+});
