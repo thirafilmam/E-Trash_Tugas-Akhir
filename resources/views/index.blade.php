@@ -26,12 +26,19 @@
     <link href="{{ asset('resources/lib/animate/animate.min.css') }}" rel="stylesheet">
     <link href="{{ asset('resources/lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('resources/lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('resources/css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('resources/css/style.css') }}" rel="stylesheet">
+    <!-- Link ke library WOW.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 
 </head>
 
@@ -53,9 +60,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="#home" class="nav-item nav-link active" data-bs-target="#home">Home</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
+                    <a href="#layanan" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Layanan</a>
                     <div class="dropdown-menu bg-light m-0">
                         <a href="pick.html" class="dropdown-item">Jemput Sampah</a>
                         <a href="report.html" class="dropdown-item">Laporkan Tumpukan Sampah</a>
@@ -69,22 +76,21 @@
     </nav>
     <!-- Navbar End -->
 
-
     <!-- Carousel Start -->
-    <div class="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container-fluid p-0 wow mb-5">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{{ asset('img/carousel-1.jpg') }}" alt="Image">
+                    <img class="w-100" src="{{ asset('img/carousel-1.jpeg') }}" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-start align-items-center">
                                 <div class="col-lg-8">
-                                    <h1 class="display-1 text-white mb-5 animated slideInDown">E-TRASH</h1>
-                                    <h2 style="margin-bottom: 0;"
-                                        class="display-4 text-white mb-2 animated slideInDown">Bank Sampah Online</h2>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Jelajahi Lebih
-                                        Lanjut</a>
+                                    <h1 class="display-1 text-white mb-3 animated slideInDown text-start">E-TRASH</h1>
+                                    <h2 class="display-4 text-white mb-3 animated slideInDown text-start">Bank Sampah
+                                        Online</h2>
+                                    <a class="btn btn-primary py-3 px-4" href="" style="float: left;">Explore
+                                        More</a>
                                 </div>
                             </div>
                         </div>
@@ -95,121 +101,113 @@
     </div>
     <!-- Carousel End -->
 
+    <div class="container wow fadeInUp" data-wow-delay="0.5s"
+        style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; background-color: #cef6cf; padding: 20px;">
 
-    <!-- Top Feature Start -->
-    <div class="container-fluid top-feature py-5 pt-lg-0">
-        <div class="container py-5 pt-lg-0">
-            <div class="row gx-0">
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-times text-primary"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h4>No Hidden Cost</h4>
-                                <span>Pembayaran pasti terbuka</span>
-                            </div>
-                        </div>
-                    </div>
+        <!-- Introduction SDGS -->
+        <div style="margin-right: 20px; text-align: left; color: #000000;">
+            <h4>
+                <span>What We</span><br>
+                <span>Do</span>
+            </h4>
+            <p style="font-size: 1.5rem;">
+                <span>SUSTAINABLE</span><br>
+                <span>DEVELOPMENT</span><br>
+                <span>GOALS</span>
+            </p>
+        </div>
+
+        <!-- Baris 2 (Atas) -->
+        <div style="margin-right: 20px;">
+            <div style="margin-bottom: 10px; display: flex; align-items: center;">
+                <img src="img/icon/icon-2.png" alt="Icon" style="width: 70px; height: 70px; margin-right: 10px;">
+                <div>
+                    <h4>SDGs 12 : Konsumsi dan Produksi <br>
+                        yang Berkelanjutan</h4>
+                    <p>Mengajak untuk merubah gaya <br>
+                        hidup menjadi berkelanjutan.</p>
                 </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-users text-primary"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h4>Dedicated Team</h4>
-                                <span>Memiliki Tim yang Profesional di Bidangnya</span>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+
+            <div style="margin-bottom: 10px; display: flex; align-items: center;">
+                <img src="img/icon/icon-1.png" alt="Icon" style="width: 70px; height: 70px; margin-right: 10px;">
+                <div>
+                    <h4>Edukasi Masyarakat</h4>
+                    <p>Memberikan edukasi komprehensif kepada <br>
+                        masyarakat tentang pentingnya mengelola <br>
+                        dan mendaur ulang sampah</p>
                 </div>
-                <div class="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="bg-white shadow d-flex align-items-center h-100 px-5" style="min-height: 160px;">
-                        <div class="d-flex">
-                            <div class="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                <i class="fa fa-phone text-primary"></i>
-                            </div>
-                            <div class="ps-3">
-                                <h4>24/7 Available</h4>
-                                <span>Admin selalu siap sedia melayani anda</span>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+        </div>
+
+        <!-- Baris 2 (Bawah) -->
+        <div style="margin-right: 20px;">
+            <div style="margin-bottom: 20px; display: flex; align-items: center;">
+                <img src="img/icon/icon-7.png" alt="Icon" style="width: 70px; height: 70px; margin-right: 10px;">
+                <div>
+                    <h4>SDGs 13 : Tindakan Terhadap <br>
+                        Perubahan Iklim</h4>
+                    <p>Tindakan Terhadap Perubahan Iklim melalui praktik <br>
+                        ramah lingkungan dan pembinaan kesadaran terhadap <br>
+                        dampak lingkungan.</p>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 20px; display: flex; align-items: center;">
+                <img src="img/icon/icon-4.png" alt="Icon" style="width: 70px; height: 70px; margin-right: 10px;">
+                <div>
+                    <h4>Pengembangan Komunitas</h4>
+                    <p>Memperkuat komunitas dengan membangun jaringan untuk <br>
+                        terlibat aktif dalam gerakan keberlanjutan.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Top Feature End -->
+    <!-- Introduction SDGS END-->
 
 
-    <!-- About Start -->
-    <div class="container-xxl py-5">
+
+    <!-- about section -->
+    <section class="about_section layout_padding mt-5 mb-5 wow fadeIn" data-wow-delay="0.5s">
         <div class="container">
-            <div class="row g-5 align-items-end">
-                <div class="col-lg-3 col-md-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <img class="img-fluid rounded" data-wow-delay="0.1s" src="img/about.jpg">
-                </div>
-                <div class="col-lg-6 col-md-7 wow fadeInUp" data-wow-delay="0.3s">
-                    <h1 class="display-1 text-primary mb-0">20</h1>
-                    <p class="text-primary mb-4">Year of Experience</p>
-                    <h1 class="display-5 mb-4">We Make Your Place Very Clean</h1>
-                    <p class="mb-4">Tumpukan sampah di perairan membahayakan hewan laut.
-                        Plastik, logam, dan bahan kimia beracun menciptakan lingkungan yang mematikan.
-                        Penyu, ikan, dan burung laut terancam oleh sampah ini,
-                        Memerlukan tindakan cepat untuk membersihkan dan melindungi lingkungan laut demi keseimbangan
-                        ekosistem global.</p>
-                    <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
-                </div>
-                <div class="col-lg-3 col-md-12 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="row g-5">
-                        <div class="col-12 col-sm-6 col-lg-12">
-                            <div class="border-start ps-4">
-                                <i class="fa fa-award fa-3x text-primary mb-3"></i>
-                                <h4 class="mb-3">Award Winning</h4>
-                                <span>Memiliki Beberapa Penghargaan yang Sangat Kompatible</span>
-                            </div>
+            <div class="row">
+                <div class="col-md-6 px-0">
+                    <div class="img_container">
+                        <div class="img-box">
+                            <img src="img/about.jpg" alt=""
+                                style="width: 610px; height: 400px; margin-right: 10px;">
                         </div>
-                        <div class="col-12 col-sm-6 col-lg-12">
-                            <div class="border-start ps-4">
-                                <i class="fa fa-users fa-3x text-primary mb-3"></i>
-                                <h4 class="mb-3">Dedicated Team</h4>
-                                <span>Tim yang Kami Miliki sangat Profesional</span>
-                            </div>
+                    </div>
+                </div>
+                <div class="col-md-6 px-0">
+                    <div class="detail-box">
+                        <div class="heading_container ">
+                            <h1>
+                                Sampah Yang Merusak <br>
+                                Ekosistem
+                            </h1>
                         </div>
+                        <p>
+                            Tumpukan sampah yang mencemari lingkungan, terutama di wilayah perairan,
+                            telah menjadi ancaman serius bagi kehidupan hewan laut yang rapuh. Plastik, logam,
+                            dan bahan kimia beracun menumpuk di lautan, menciptakan lingkungan yang beracun dan
+                            mematikan bagi biota laut. Hewan-hewan seperti penyu, ikan, dan burung laut dapat
+                            tersangkut
+                            atau memakan sampah ini, menyebabkan luka serius atau bahkan kematian. Selain itu,
+                            proses
+                            dekomposisi
+                            sampah juga dapat menghasilkan zat beracun yang mencemari habitat alami hewan laut.
+                            Situasi ini membutuhkan tindakan segera dan berkelanjutan untuk membersihkan dan
+                            melindungi
+                            lingkungan laut demi keseimbangan ekosistem global.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- About End -->
+    </section>
+    <!-- end about section -->
 
-
-    <!-- Facts Start -->
-    <div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
-        <div class="container py-5">
-            <div class="row g-5">
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">1780</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Happy Clients</span>
-                </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">2300</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Project Complated</span>
-                </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">40</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Dedicated Staff</span>
-                </div>
-                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-                    <h1 class="display-4 text-white" data-toggle="counter-up">145</h1>
-                    <span class="fs-5 fw-semi-bold text-light">Awards Achieved</span>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Features Start -->
     <div class="container-xxl py-5">
@@ -218,9 +216,10 @@
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="fs-5 fw-bold text-primary">Why Choosing Us!</p>
                     <h1 class="display-5 mb-4">Few Reasons Why People Choosing Us!</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam
-                        et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat
-                        amet</p>
+                    <p class="mb-4">Produksi sampah merupakan sesuatu yang tidak bisa dihindari. Mengurangi sampah
+                        sendiri bukanlah perkara yang mudah. Hal yang paling sederhana, mudah, dan penting yang dapat
+                        kita lakukan setelah menghasilkan sampah adalah memisahkan sampah organik dan sampah anorganik.
+                    </p>
                     <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
                 </div>
                 <div class="col-lg-6">
@@ -265,13 +264,38 @@
     </div>
     <!-- Features End -->
 
+    <!-- Facts Start -->
+    <div class="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">380</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Happy Clients</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">150.870</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Sampah Terdaur Ulang (KG)</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">38</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Dedicated Staff</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">190</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Awards Achieved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->
+
+
 
     <!-- Service Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-bold text-primary">Our Services</p>
-                <h1 class="display-5 mb-5">Services That We Offer For You</h1>
+                <h1 class="display-5 mb-5">Layanan Kami</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -284,8 +308,9 @@
                                 <img class="img-fluid" src="img/icon/icon-3.png" alt="Icon">
                             </div>
                             <h4 class="mb-3">Jemput Sampah</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet.</p>
+                            <p class="mb-4">Dengan e trash, kami bawa kemudahan ke pintu Anda.
+                                Nikmati pelayanan jemput sampah yang andal, hemat waktu, dan
+                                ramah lingkungan. Jadwalkan pengambilan sampah Anda sekarang!</p>
                             <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read
                                 More</a>
                         </div>
@@ -301,8 +326,9 @@
                                 <img class="img-fluid" src="img/icon/icon-6.png" alt="Icon">
                             </div>
                             <h4 class="mb-3">Lapor Tumpukan Sampah</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet.</p>
+                            <p class="mb-4">Laporkan tumpukan sampah di sekitar Anda dan saksikan perubahan
+                                positif bersama e trash. Setiap laporan Anda adalah langkah menuju lingkungan
+                                yang lebih bersih dan berkelanjutan. Mari bergabung dalam upaya kita bersama!</p>
                             <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read
                                 More</a>
                         </div>
@@ -318,8 +344,10 @@
                                 <img class="img-fluid" src="img/icon/icon-5.png" alt="Icon">
                             </div>
                             <h4 class="mb-3">Jual Sampah</h4>
-                            <p class="mb-4">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
-                                stet diam sed stet.</p>
+                            <p class="mb-4">Sampah Anda adalah potensi yang belum terungkap.
+                                Dengan e trash, Anda dapat mengubahnya menjadi nilai. Jual sampah Anda dengan
+                                mudah dan tingkatkan kesadaran akan pentingnya daur ulang. Mulai sekarang,
+                                jadikan setiap sampah bernilai!</p>
                             <a class="btn btn-sm" href=""><i class="fa fa-plus text-primary me-2"></i>Read
                                 More</a>
                         </div>
@@ -337,41 +365,41 @@
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
-                        <h1 class="display-5 text-center mb-5">Get A Free Quote</h1>
+                        <h1 class="display-5 text-center mb-5">Formulir Pendaftaran</h1>
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control bg-light border-0" id="gname"
                                         placeholder="Gurdian Name">
-                                    <label for="gname">Your Name</label>
+                                    <label for="gname">Nama</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control bg-light border-0" id="gmail"
                                         placeholder="Gurdian Email">
-                                    <label for="gmail">Your Email</label>
+                                    <label for="gmail">Email</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control bg-light border-0" id="cname"
                                         placeholder="Child Name">
-                                    <label for="cname">Your Mobile</label>
+                                    <label for="cname">No Telepon</label>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control bg-light border-0" id="cage"
                                         placeholder="Child Age">
-                                    <label for="cage">Service Type</label>
+                                    <label for="cage">Tipe Layanan</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control bg-light border-0" placeholder="Leave a message here" id="message"
                                         style="height: 100px"></textarea>
-                                    <label for="message">Message</label>
+                                    <label for="message">Keterangan</label>
                                 </div>
                             </div>
                             <div class="col-12 text-center">
@@ -390,8 +418,8 @@
     <div class="container-xxl py-5">
         <div class="container">
             <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-bold text-primary">Our Projects</p>
-                <h1 class="display-5 mb-5">Some Of Our Wonderful Projects</h1>
+                <p class="fs-5 fw-bold text-primary">Project Kita</p>
+                <h1 class="display-5 mb-5">Beberapa Project Keren Kita</h1>
             </div>
             <div class="row wow fadeInUp" data-wow-delay="0.3s">
                 <div class="col-12 text-center">
@@ -461,10 +489,10 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-item rounded">
-                        <img class="img-fluid" src="img/team-1.jpg" alt="">
+                        <img class="img-fluid" src="img/team-1.jpeg" alt="">
                         <div class="team-text">
                             <h4 class="mb-0">Rastama Hanin Berlyan</h4>
-                            <p class="text-primary">Landscape Designer</p>
+                            <p class="text-primary">Supervisor</p>
                             <div class="team-social d-flex">
                                 <a class="btn btn-square rounded-circle me-2" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -478,10 +506,10 @@
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-item rounded">
-                        <img class="img-fluid" src="img/team-2.jpg" alt="">
+                        <img class="img-fluid" src="img/team-2.png" alt="">
                         <div class="team-text">
                             <h4 class="mb-0">Tegar Putra Pradana</h4>
-                            <p class="text-primary">Garden Designer</p>
+                            <p class="text-primary">Supervisor</p>
                             <div class="team-social d-flex">
                                 <a class="btn btn-square rounded-circle me-2" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -498,7 +526,7 @@
                         <img class="img-fluid" src="img/team-3.jpg" alt="">
                         <div class="team-text">
                             <h4 class="mb-0">Thirafi Ilmam</h4>
-                            <p class="text-primary">Senior Gardener</p>
+                            <p class="text-primary">Supervisor</p>
                             <div class="team-social d-flex">
                                 <a class="btn btn-square rounded-circle me-2" href=""><i
                                         class="fab fa-facebook-f"></i></a>
@@ -514,43 +542,6 @@
         </div>
     </div>
     <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <p class="fs-5 fw-bold text-primary">Testimonial</p>
-                    <h1 class="display-5 mb-5">What Our Clients Say About Us!</h1>
-                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam
-                        et eos. Clita erat ipsum et lorem et sit sed stet lorem sit clita duo justo.</p>
-                    <a class="btn btn-primary py-3 px-4" href="">See More</a>
-                </div>
-                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="testimonial-item">
-                            <img class="img-fluid rounded mb-3" src="img/testimonial-1.jpg" alt="">
-                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore
-                                lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
-                            </p>
-                            <h4>Client Name</h4>
-                            <span>Profession</span>
-                        </div>
-                        <div class="testimonial-item">
-                            <img class="img-fluid rounded mb-3" src="img/testimonial-2.jpg" alt="">
-                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore
-                                lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.
-                            </p>
-                            <h4>Client Name</h4>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
 
 
     <!-- Footer Start -->
